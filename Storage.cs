@@ -70,11 +70,11 @@ namespace Cloudcrate.AspNetCore.Blazor.Browser.Storage
             SetItem(key, Json.Serialize(data));
         }
 
-        public string this[string key]
-        {
-            get { var t = _jsRuntime.InvokeAsync<string>($"{_fullTypeName}.GetItemString", key);t.RunSynchronously(); return t.Result; }
-            set => _jsRuntime.InvokeAsync<object>($"{_fullTypeName}.SetItemString", key, value);
-        }
+        //public string this[string key]
+        //{
+        //    get { var t = _jsRuntime.InvokeAsync<string>($"{_fullTypeName}.GetItemString", key);t.RunSynchronously(); return t.Result; }
+        //    set => _jsRuntime.InvokeAsync<object>($"{_fullTypeName}.SetItemString", key, value);
+        //}
 
         //public string this[int index]
         //{
